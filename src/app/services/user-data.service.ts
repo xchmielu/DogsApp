@@ -69,12 +69,7 @@ export class UserDataService {
   showUserDogs() {
     const users = JSON.parse(localStorage.getItem('users'));
     const currentUser = localStorage.getItem('currentUser');
-    users.map(dog => {
-      console.log(dog);
-      if (dog.token === currentUser && dog.dogs !== undefined) {
-        console.log(dog);
-        return dog.dogs;
-      }
-    });
+    console.log(users);
+    return users.find(user => user.token === currentUser).dogs;
   }
 }

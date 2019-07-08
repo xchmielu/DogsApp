@@ -9,6 +9,7 @@ import { UserDataService } from '../services/user-data.service';
 export class DogListComponent {
   constructor(private userDataService: UserDataService) {}
   dogs = this.userDataService.showUserDogs();
+
   onClick() {
     console.log(this.userDataService.showUserDogs());
   }

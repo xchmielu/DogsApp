@@ -3,10 +3,9 @@
 <div class="block">
   <mat-card>
     Dogs:
-    <ul *ngFor="let dog of dogs">
-      <li>{{ dog }}</li>
+    <ul>
+      <li *ngFor="let dog of dogs">{{ dog.dogName }}</li>
     </ul>
-    <button (click)="onClick()">Test</button>
   </mat-card>
 </div>
 <router-outlet></router-outlet>
