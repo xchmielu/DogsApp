@@ -1,0 +1,24 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import '~@angular/material/theming';
+@import 'shared/block';
+
+$font: 'Raleway';
+
+* {
+  font-family: $font, sans-serif !important;
+}
+
+html {
+  background-color: #56baed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: $font !important;
+}
+
+body {
+}

@@ -1,0 +1,37 @@
+<app-profile-nav></app-profile-nav>
+
+<div class="block">
+  <mat-card>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="block__container">
+        <mat-form-field>
+          <input matInput placeholder="Dog Name" formControlName="dogName" />
+        </mat-form-field>
+      </div>
+      <div class="block__container">
+        <mat-form-field>
+          <mat-select placeholder="Dog Bread" formControlName="dogBread">
+            <mat-option *ngFor="let dog of dogs" [value]="dog">
+              {{ dog }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="block__container">
+        <mat-form-field>
+          <mat-select placeholder="Dog Owner" formControlName="owner">
+            <mat-option *ngFor="let user of users" [value]="user">
+              {{ user }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="block__container">
+        <button mat-button color="primary" type="submit" [disabled]="!profileForm.valid">
+          Add Dog
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>
+<router-outlet></router-outlet>

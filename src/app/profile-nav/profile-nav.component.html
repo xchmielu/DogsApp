@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="button">
+    <button
+      mat-flat-button
+      color="primary"
+      routerLink="/my-profile"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      My profile
+    </button>
+  </div>
+  <div class="button">
+    <button
+      mat-flat-button
+      color="primary"
+      routerLink="/dog-creator"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active-link"
+    >
+      Dog Creator
+    </button>
+  </div>
+  <div class="button">
+    <button
+      mat-flat-button
+      color="primary"
+      routerLink="/dog-list"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active-link"
+    >
+      Dog List
+    </button>
+  </div>
+  <div class="button">
+    <button mat-flat-button color="warn" (click)="logOut()">Logout</button>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

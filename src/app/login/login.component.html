@@ -1,0 +1,45 @@
+<button clsss="block__container--button" mat-raised-button color="primary" routerLink="/register">
+  Register
+</button>
+<div class="block">
+  <mat-card>
+    <div class="block__container--avatar">
+      <div mat-card-avatar class="block__container--avatar--img"></div>
+    </div>
+    <div class="block__container">
+      <mat-form-field>
+        <input [formControl]="nameFormControl" matInput placeholder="Name" />
+        <mat-hint>Give your name</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="block__container">
+      <mat-form-field>
+        <input
+          [formControl]="passwordFormControl"
+          type="password"
+          matInput
+          placeholder="Password"
+        />
+        <mat-hint>Create your password</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="block--row">
+      <div class="block__container">
+        <mat-radio-button>Remember</mat-radio-button>
+      </div>
+      <div class="block__container">
+        <button
+          (click)="onSubmit()"
+          clsss="block__container--button"
+          mat-raised-button
+          color="primary"
+        >
+          Log in
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>
+<router-outlet></router-outlet>
